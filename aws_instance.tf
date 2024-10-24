@@ -1,15 +1,18 @@
-# Provider configuration for AWS
-provider "aws" {
-  region = "us-east-1"
+resource "aws_key_pair" "deployer" {
+  key_name   = "terra-automate-key"
+  public_key = file("terra-key.pub")
 }
 
-# Define a security group to allow SSH access
-resource "aws_security_group" "instance_sg" {
-  name        = "allow_ssh"
-  description = "Security group for EC2 instance to allow SSH"
+resource "aws_default_vpc" "default" {
 
+}
+
+resource "aws_security_group" "allow_user_to_connect" {
+  name        = "allow TLS"
+  description = "Allow user to connect"
+  vpc_id      = aws_default_vpc.default.id
   ingress {
-    description = "Allow SSH"
+    description = "port 22 allow"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
@@ -17,41 +20,44 @@ resource "aws_security_group" "instance_sg" {
   }
 
   egress {
+    description = " allow all outgoing traffic "
     from_port   = 0
     to_port     = 0
-    protocol    = "-1" # Allow all outbound traffic
+    protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-}
 
-# EC2 Instance definition
-resource "aws_instance" "example" {
-  ami           = "ami-0dee22c13ea7a9a67" # Example Amazon Linux 2 AMI (Check your region for valid AMI)
-  instance_type = "t2.micro"
-
-  # Security group
-  vpc_security_group_ids = [sg-00c2ad8288fc6dbd5]]
-
-  # Key pair for SSH access (replace with your key)
-  key_name = "N.virginia"
-
-  # Define the instance's tags
-  tags = {
-    Name = "MyTerraformInstance"
+  ingress {
+    description = "port 80 allow"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
-  # User data (optional): Script to run at launch (e.g., install a web server)
-  user_data = <<-EOF
-              #!/bin/bash
-              sudo yum update -y
-              sudo yum install httpd -y
-              sudo systemctl start httpd
-              sudo systemctl enable httpd
-              EOF
+  ingress {
+    description = "port 443 allow"
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "mysecurity"
+  }
 }
 
-# Output the public IP address of the instance
-output "instance_public_ip" {
-  value = aws_instance.example.public_ip
+resource "aws_instance" "testinstance" {
+  ami             = var.ami_id
+  instance_type   = var.instance_type
+  key_name        = aws_key_pair.deployer.key_name
+  security_groups = [aws_security_group.allow_user_to_connect.name]
+  tags = {
+    Name = "Terra-Automate"
+  }
+  root_block_device {
+    volume_size = 10 
+    volume_type = "gp3"
+  }
 }
-
