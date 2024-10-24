@@ -26,14 +26,14 @@ resource "aws_security_group" "instance_sg" {
 
 # EC2 Instance definition
 resource "aws_instance" "example" {
-  ami           = "ami-0c55b159cbfafe1f0" # Example Amazon Linux 2 AMI (Check your region for valid AMI)
+  ami           = "ami-0dee22c13ea7a9a67" # Example Amazon Linux 2 AMI (Check your region for valid AMI)
   instance_type = "t2.micro"
 
   # Security group
-  vpc_security_group_ids = [aws_security_group.instance_sg.id]
+  vpc_security_group_ids = [sg-00c2ad8288fc6dbd5]]
 
   # Key pair for SSH access (replace with your key)
-  key_name = "your-key-name"
+  key_name = "N.virginia"
 
   # Define the instance's tags
   tags = {
