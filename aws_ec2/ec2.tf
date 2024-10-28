@@ -4,7 +4,6 @@ resource "aws_instance" "this_inst" {
     disable_api_termination = true  
     instance_type = "t4g.nano" 
     key_name = "mum-key"
-    security_groups = ["sg-0a915226a5d9bb382"]
     count = 4  #loop 
     tags = {
       name = "ratnadeep sali"
