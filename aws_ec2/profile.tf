@@ -1,7 +1,7 @@
 provider "aws" {
  region = "ap-south-1"
  profile = "configs"
- tag {
+ tags {
     name = "Ratnadeep"
  }
 }
