@@ -8,7 +8,7 @@ resource "aws_instance" "this_ubuntu" {
     security_groups = ["sg-0a915226a5d9bb382"]
     count = 4  #loop 
     tags = {
-      purpose = "jenkins server"
+      name = "ratnadeep sali"
     } 
     
 
