@@ -7,9 +7,9 @@ resource "aws_s3_bucket" "bucket" {
 }
  
 resource "aws_s3_bucket_object" "object_s3" {
-  bucket = "aws_s3_bucket.bucket.id"
-  key    = "index.html"
-  source = "ratnadeepsali05/terraform/s3_bucket/object/"
+  bucket = "ratnadeepsali05"
+  key    = "ratnadeepsali05/terraform/s3_bucket/object"
+  source = "ratnadeepsali05/terraform/s3_bucket/object"
   acl    = "public-read"
 
 
