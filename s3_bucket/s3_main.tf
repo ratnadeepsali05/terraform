@@ -5,3 +5,11 @@ resource "aws_s3_bucket" "bucket" {
     Name        = "My bucket"
   }
 }
+ 
+resource "aws_s3_bucket_object" "object" {
+  bucket = "aws_s3_bucket.bucket.id"
+  key    = ""
+  source = "path/to/file"
+
+
+}
