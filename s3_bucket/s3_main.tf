@@ -8,8 +8,8 @@ resource "aws_s3_bucket" "bucket" {
  
 resource "aws_s3_bucket_object" "object" {
   bucket = "aws_s3_bucket.bucket.id"
-  key    = ""
-  source = "path/to/file"
+  key    = "object"
+  source = "ratnadeepsali05/terraform/s3_bucket/object"
 
 
 }
