@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "bucket" {
-  bucket = "my-tf-main-bucket_globle"
+  bucket = "mytfmainbucketgloble5525"
 
   tags = {
     Name        = "My bucket"
