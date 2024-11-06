@@ -3,7 +3,7 @@ resource "aws_db_instance" "this_rds" {
   engine               = var.this_list[1]                
   engine_version       = var.this_list[2]                     
   instance_class       = var.this_list[3]           
-  name                 = var.this_list[4]           
+  db_name              = var.this_list[4]           
   username             = var.this_list[5]                   
   password             = var.this_list[6]               
   parameter_group_name = var.this_list[7]        
