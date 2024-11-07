@@ -1,26 +1,9 @@
-resource "aws dynamodb table" "basic-table-" {
-
-  name          = "dynamo_table"
-  billing_mode  = "PAY_PER_REQUEST"
-  read capacity = 20
-  write_capacity = 20
-  hash_key       = "table_demo_id"
-
-  attribute {
-    name = "table_demo_id"
-    type = "S"
-
-}
-
-  ttl {
-   ttribute name = "TimeToExist"
-   enabled       = false
-}
-
- tags = {
-   Name = "Sample Table
-   Environment = "Test"
-
- }
-
+resource "aws_dynamodb_table" "my_app_table" {
+    name = "test-my-app-table-d"
+    billing_mode = "PAY_PER_REQUEST"
+    hash_key = "id"
+    attribute {
+        name = "id"
+        type = "S"
+    }
 }
