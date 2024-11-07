@@ -12,14 +12,14 @@ resource "aws dynamodb table" "basic-table-" {
 
 }
 
-ttl {
-  ttribute name = "TimeToExist"
-  enabled       = false
+ ttl {
+   ttribute name = "TimeToExist"
+   enabled       = false
 }
 
-tags = {
-Name = "Sample Table
-Environment = "Test"
+ tags = {
+   Name = "Sample Table
+   Environment = "Test"
 
  }
 
