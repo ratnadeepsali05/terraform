@@ -1,7 +1,7 @@
 resource "aws dynamodb table" "basic-table-" {
 
   name          = "dynamo_table"
-  billing_mode  = "PROVISIONED"
+  billing_mode  = "PAY_PER_REQUEST"
   read capacity = 20
   write_capacity = 20
   hash_key       = "table_demo_id"
@@ -12,7 +12,7 @@ resource "aws dynamodb table" "basic-table-" {
 
 }
 
- ttl {
+  ttl {
    ttribute name = "TimeToExist"
    enabled       = false
 }
