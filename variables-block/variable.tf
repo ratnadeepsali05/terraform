@@ -30,7 +30,6 @@ variable "this_list" {
      
 }
 
-}
 
 variable "this_map" {
     type = map  
