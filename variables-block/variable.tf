@@ -20,7 +20,7 @@ variable "this_count" {
 }
 variable "this_vpc_security_group_ids" {
     type = string 
-    default = "sg-0505874879e7ce6cd"
+    default = "sg-0a915226a5d9bb382"
      
 }
 
@@ -37,7 +37,7 @@ variable "this_map" {
     default = {
      purposeec2 = "webserver"   
      termination = true 
-     count = 1
+     count = 2
 
     }
      
