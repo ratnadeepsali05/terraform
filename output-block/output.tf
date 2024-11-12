@@ -1,0 +1,14 @@
+output "instance_id" {
+    value = aws_instance.this_ubuntu.id
+  
+}
+
+output "instancepublic_ip" {
+    value = aws_instance.this_ubuntu.public_ip
+  
+}
+
+output "instancepublic_ip" {
+    value = aws_instance.this_ubuntu.private_ip
+  
+}
