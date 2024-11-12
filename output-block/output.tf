@@ -3,12 +3,8 @@ output "instance_id" {
   
 }
 
-output "instancepublic_ip" {
+output "instance_public_ip" {
     value = aws_instance.this_ubuntu.public_ip
   
 }
 
-output "instancepublic_ip" {
-    value = aws_instance.this_ubuntu.private_ip
-  
-}
