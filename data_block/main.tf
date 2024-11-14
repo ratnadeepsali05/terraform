@@ -1,11 +1,3 @@
-resource "aws_s3_bucket" "my_bucket" {
-  bucket = "terraform-state-bucket-s3-state-store"
-
-  tags = {
-    Name = "My_bucket"
-  }
-}
-
 resource "aws_instance" "ubuntu" {
   ami           = data.aws_ami.this_ubuntu_ami.id 
   instance_type = var.this_instance_type[0]              
