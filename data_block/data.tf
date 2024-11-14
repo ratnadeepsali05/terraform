@@ -2,7 +2,7 @@ data "aws_ami" "this_ubuntu_ami" {
     name_regex       = "ubuntu_ami"
       filter {
     name   = "name"
-    values = ["boxer_ami"]
+    values = ["ubuntu_ami"]
     }
 
 }
