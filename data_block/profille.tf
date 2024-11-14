@@ -22,3 +22,5 @@ backend "s3" {
 	bucket = "terraform-state-bucket-s3-state-store" 
 	key = "terraform.tfstate"
 	region = "ap-south-1"
+}
+}
