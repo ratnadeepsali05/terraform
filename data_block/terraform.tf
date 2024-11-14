@@ -11,5 +11,5 @@ required_providers {
 	bucket = "terraform-state-bucket-s3-state-store" 
 	key = "terraform.tfstate"
 	region = "ap-south-1"
-}
+  }
 }
