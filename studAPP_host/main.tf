@@ -48,7 +48,7 @@ resource "aws_instance" "web_server_instance" {
               sudo apt install mariadb-client -y
 
               # Clone the repository
-              git clone https://github.com/Aamantamboli/Studentapp.git /home/ubuntu/Studentapp
+              git clone https://github.com/ratnadeepsali05/studentapp-ui.git /home/ubuntu/Studentapp
               # Navigate to the project directory and build it
               cd /home/ubuntu/Studentapp
               mvn clean package
