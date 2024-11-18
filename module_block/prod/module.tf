@@ -1,5 +1,5 @@
 module "ec2" {
-        source = "/home/anup/deleteafterpractice/Terraform/Module/resources/EC2"
+        source = "/home/cloudshell-user/terraform/module_block/resource/ec2"
         This_api_termination = true
         This_key = "mum-key"
         This_az  = "ap-south-1"
@@ -14,7 +14,7 @@ module "ec2" {
 }
 
 module "aws_vpc" {
-        source = "/home/anup/deleteafterpractice/Terraform/Module/resources/VPC"
+        source = "/home/cloudshell-user/terraform/module_block/resource/vpc"
         this_vpc_cidr_block = "192.168.0.0/16"
         this_vpc_cidr_tags = "vpc"
         this_public_cidr_block  = "192.168.0.0/17"
