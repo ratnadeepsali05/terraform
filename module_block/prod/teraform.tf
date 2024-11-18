@@ -8,7 +8,7 @@ required_providers {
   }
 
 backend "s3" {
-	bucket = "terraform-state-bucket-s3-state-store" 
+	bucket = "mytfmainbucketgloble5525" 
 	key = "terraform.tfstate"
 	region = "ap-south-1"
 	
