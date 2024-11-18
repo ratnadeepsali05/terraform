@@ -1,4 +1,4 @@
-resource "aws_instance" "this_instance" {
+resource "aws_instance" "this_ec2" {
   ami                     = var.This_ami
   instance_type           = var.This_inst
   availability_zone       = var.This_az

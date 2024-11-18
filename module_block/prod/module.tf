@@ -2,7 +2,7 @@ module "ec2" {
         source = "/home/cloudshell-user/terraform/module_block/resource/ec2"
         This_api_termination = true
         This_key = "mum-key"
-        This_az  = "ap-south-1"
+        This_az  = "ap-south-1a"
         This_tag =  "webapp"
         This_inst = "t2.micro"
         #This_sg  = ["sg-09d5d9601120f72dd"]
