@@ -1,4 +1,4 @@
 
 output "ec2_outputs" {
-  value = aws_instance.this_inst.public_ip
+  value = aws_instance.this_instance.public_ip
 }
