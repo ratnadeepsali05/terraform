@@ -47,5 +47,7 @@ resource "aws_instance" "this_ec2" {
     disable_api_termination =  var.this_disable_api_termination  #var.this_disable_api_termination  
     instance_type = var.this_list  #var.this_any.instance_type_list[0]
     subnet_id =  var.this_aws_instance_subnet 
-}   key_name                = var.This_key
+    key_name                = var.This_key
     vpc_security_group_ids  = [aws_security_group.web_server.id]
+
+}   
