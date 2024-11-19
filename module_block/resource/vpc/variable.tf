@@ -15,3 +15,7 @@ variable "this_public_tags" {
 variable "this_public_map_pub" {
     type = bool
 } 
+variable "this_vpc_az" {
+  type = string
+
+}

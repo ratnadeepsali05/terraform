@@ -25,3 +25,12 @@ variable "this_aws_vpc_id" {
 variable "this_aws_instance_subnet" {
      type = string
 }
+
+variable "ec2_vpc_id" {
+  type = string
+} 
+
+variable "this_aws_instance_subnet" {
+   type = string
+
+}
