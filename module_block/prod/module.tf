@@ -18,3 +18,4 @@ module "aws_vpc" {
      this_subnet_pub_map_ip  = true 
      this_subnet_pub_tags = "pub_subnet"
      this_vpc_az = "ap-south-1a"
+}
