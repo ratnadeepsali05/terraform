@@ -5,12 +5,12 @@ module "ec2" {
     this_disable_api_stop = false
     this_disable_api_termination = false
     #this_vpc_security_group_ids = "sg-0505874879e7ce6cd"
-    this_aws_instance_subnet = module.vpc.subnet_id
+    this_aws_instance_subnet = module.aws_vpc.subnet_id
     #this_sg_vpc_id = module.vpc.vpc_id
     //this_aws_vpc_id = module.vpc.aws_vpc_id
 }
 
-module "vpc" {
+module "aws_vpc" {
      source = "/home/anup/terraform/deleteafterpractice/Module/Resources/VPC"
      this_vpc_cidr_block = "192.168.0.0/16"
      this_vpc_tags = "this_vpc"
