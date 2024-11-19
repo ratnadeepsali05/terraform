@@ -40,16 +40,12 @@ resource "aws_security_group" "web_server" {
   }
 }
 
+
 resource "aws_instance" "this_ec2" {
-  ami                     = var.This_ami
-  instance_type           = var.This_inst
-  availability_zone       = var.This_az
-  disable_api_termination = var.This_api_termination
-  key_name                = var.This_key
-  vpc_security_group_ids  = [aws_security_group.web_server.id]
-  subnet_id =  var.this_aws_instance_subnet 
-  tags = {
-      Name = var.This_tag
-     }
- 
-}
+    ami = var.this_image_id    #var.this_image_id 
+    disable_api_stop  = var.this_disable_api_stop  #var.this_disable_api_stop 
+    disable_api_termination =  var.this_disable_api_termination  #var.this_disable_api_termination  
+    instance_type = var.this_list  #var.this_any.instance_type_list[0]
+    subnet_id =  var.this_aws_instance_subnet 
+}   key_name                = var.This_key
+    vpc_security_group_ids  = [aws_security_group.web_server.id]
