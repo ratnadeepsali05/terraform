@@ -20,4 +20,3 @@ variable "this_vpc_az" {
 
 }
 
-v
