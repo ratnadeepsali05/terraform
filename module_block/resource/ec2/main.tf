@@ -42,7 +42,7 @@ resource "aws_security_group" "web_server" {
 
 
 resource "aws_instance" "this_ec2" {
-    ami = var.this_image_id    #var.this_image_id 
+    ami = var.this_This_ami    #var.this_image_id 
     disable_api_stop  = var.this_disable_api_stop  #var.this_disable_api_stop 
     disable_api_termination =  var.this_disable_api_termination  #var.this_disable_api_termination  
     instance_type = var.this_list  #var.this_any.instance_type_list[0]

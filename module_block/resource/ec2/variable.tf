@@ -2,22 +2,13 @@
 variable "This_api_termination" {
 }
 
-variable "This_key" {   
-}
-
-variable "This_az" {    
-
-}
-
-variable "This_tag" {   
-}
-
-variable "This_inst" {    
+variable "This_key" {
+    type = string   
 }
 
 
-
-variable "This_ami" {    
+variable "This_ami" {
+     type = string    
 }
 variable "this_aws_vpc_id" {
     type = string
