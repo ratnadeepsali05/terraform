@@ -1,25 +1,30 @@
-variable "this_image_id" {
+variable "this_db_engine" {
   type        = string
   default = "mysql"
 }
 
-variable "this_disable_api_stop" {
-  type        = bool
-  default = false
+variable "this_engine_version" {
+  type        = string 
+  default = "8.0"
 }
-variable "this_disable_api_termination" {
-    type = bool 
-    default = false
-    description = "this variable is used to pass bool data to api_termination" 
+variable "this_instance_class" {
+    type = string 
+    default = "db.t3.micro" 
 }
-variable "this_count" {
-    type = number 
-    default = 2
+variable "this_db_name" {
+    type = string 
+    default = "mydatabase_mysql_1"
      
 }
-variable "this_vpc_security_group_ids" {
+variable "this_username" {
     type = string 
-    default = "sg-0a915226a5d9bb382"
+    default = "admin"
+     
+}
+
+variable "this_pass" {
+    type = string 
+    default = "password123"
      
 }
 
