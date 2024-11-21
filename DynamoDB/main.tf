@@ -1,7 +1,7 @@
 resource "aws_dynamodb_table" "my_app_table" {
     name = "test-my-app-table-d"
     billing_mode = "PAY_PER_REQUEST"
-    hash_key = "id"
+    hash_key = "LockID"
     attribute {
         name = "id"
         type = "S"
