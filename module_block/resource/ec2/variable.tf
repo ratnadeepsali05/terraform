@@ -1,7 +1,3 @@
-
-variable "This_api_termination" {
-}
-
 variable "This_key" {
     type = string   
 }
@@ -26,7 +22,7 @@ variable "this_image_id" {
 
 
 
-variable "this_list" {
+variable "this_ec2type" {
     type = string
      
 }
