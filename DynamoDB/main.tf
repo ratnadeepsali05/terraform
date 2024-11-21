@@ -3,7 +3,7 @@ resource "aws_dynamodb_table" "my_app_table" {
     billing_mode = "PAY_PER_REQUEST"
     hash_key = "LockID"
     attribute {
-        name = "id"
+        name = "LockID"
         type = "S"
     }
 }
