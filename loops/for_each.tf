@@ -5,5 +5,5 @@ resource "aws_iam_user" "main_user1" {
 
  variable "aws_user_name" {
     type = list(string)
-    default =  ["ubuntu","awslinux","redhat","solaris"]
+    default =  ["ubuntu","awslinux","redhat","solaris","akash","dnyaneshwar"]
 } 
