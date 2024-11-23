@@ -1,9 +1,4 @@
-provider "aws" {
-    region =  "us-east-1"
-    profile = "configs"
-}
-
- resource "aws_instance" "this_aws_instance" {
+resource "aws_instance" "this_aws_instance" {
     ami = "ami-0614680123427b75e"
     vpc_security_group_ids = ["sg-0a915226a5d9bb382"]
     key_name = "mum-key"
