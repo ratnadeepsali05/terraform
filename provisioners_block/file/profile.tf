@@ -22,6 +22,5 @@ backend "s3" {
 	key = "terraform.tfstate"
 	region = "ap-south-1"
   profile = "configs"
-  shared_credentials_files = ["~/.aws/credentials"]
 }
 }
