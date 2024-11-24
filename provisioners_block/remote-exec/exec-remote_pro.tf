@@ -10,7 +10,7 @@ resource "aws_instance" "this_aws_instance" {
       connection {
     type     = "ssh"
     user     = "ec2-user"
-    private_key = file("${path.module}/id_rsa")
+    private_key = file("${path.module}/id_rsa.pem")
     host     = "${self.public_ip}"
   } 
   }
