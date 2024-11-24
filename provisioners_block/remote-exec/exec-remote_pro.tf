@@ -5,13 +5,7 @@
     vpc_security_group_ids = ["sg-0a915226a5d9bb382"]
     key_name = "mum-key"
     instance_type = "t2.micro"
-  provisioner "file" {
-     source      = "readme.md"
-     destination = "/home/ec2-user/aws/"
-  }
-  provisioner "local-exec" {
-     command = "echo ${self.private_ip} >> private_ips.txt"
-  }
+ 
     connection {
     type     = "ssh"
     user     = "ec2-user"
