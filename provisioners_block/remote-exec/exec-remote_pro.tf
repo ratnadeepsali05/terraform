@@ -7,20 +7,23 @@ resource "aws_instance" "this_aws_instance" {
      provisioner "file" {
     source      = "readme.md"
     destination = "/home/ec2-user/readme.md"
-      connection {
-    type     = "ssh"
-    user     = "ec2-user"
-    private_key = file("${path.module}/id_rsa.pem")
-    host     = "${self.public_ip}"
-  } 
-  }
- provisioner "remote-exec" {
+    provisioner "remote-exec" {
     inline = [
-      "ifconfig > /tmp/ifconfig.out",
-      "echo 'hello world' > /tmp/test.txt",
+      "sudo apt update",
+      "sudo apt install -y nginx",
+      "sudo systemctl start nginx"
     ]
+
+    connection {
+     type     = "ssh"
+     user     = "ec2-user"
+     private_key = file("${path.module}/id_rsa.pem")
+     host     = "${self.public_ip}"
+  }
   }
 
-
- }
+  tags = {
+    Name = "MyInstance"
+  }
+}
  
