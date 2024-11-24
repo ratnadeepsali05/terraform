@@ -24,7 +24,7 @@ resource "aws_instance" "this_aws_instance" {
   }
 }
 
-provisioner "remote-exec" {
+/*provisioner "remote-exec" {
   script = "path/to/script.sh"
 
   connection {
@@ -33,6 +33,6 @@ provisioner "remote-exec" {
     private_key = file("path/to/id_rsa.pem")
     host        = self.public_ip
   }
-}
+}*/
 
  
