@@ -13,6 +13,7 @@ resource "aws_instance" "this_aws_instance" {
       "sudo apt install -y nginx",
       "sudo systemctl start nginx"
     ]
+    
 
     connection {
      type     = "ssh"
@@ -25,5 +26,6 @@ resource "aws_instance" "this_aws_instance" {
   tags = {
     Name = "MyInstance"
   }
+}
 }
  
