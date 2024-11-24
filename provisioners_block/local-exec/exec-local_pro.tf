@@ -6,10 +6,10 @@ resource "aws_instance" "this_aws_instance" {
      
      provisioner "file" {
     source      = "readme.md"
-    destination = "/home/ubuntu/readme.md"
+    destination = "/home/ec2-user/readme.md"
       connection {
     type     = "ssh"
-    user     = "ubuntu"
+    user     = "ec2-user"
     private_key = file("${path.module}/id_rsa.pem")
     host     = "${self.public_ip}"
   }
