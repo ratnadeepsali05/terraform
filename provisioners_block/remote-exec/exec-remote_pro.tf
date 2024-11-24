@@ -24,4 +24,15 @@ resource "aws_instance" "this_aws_instance" {
   }
 }
 
+provisioner "remote-exec" {
+  script = "path/to/script.sh"
+
+  connection {
+    type        = "ssh"
+    user        = "ec2-user"
+    private_key = file("path/to/id_rsa.pem")
+    host        = self.public_ip
+  }
+}
+
  
