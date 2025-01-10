@@ -46,7 +46,7 @@ resource "aws_instance" "carvcilla_instance" {
 }
 
 # Route 53 Hosted Zone (if you don’t already have it)
-/*data "aws_route53_zone" "selected_zone" {
+data "aws_route53_zone" "selected_zone" {
   name         = var.domain_name
   private_zone = false
 }
@@ -58,4 +58,4 @@ resource "aws_route53_record" "carvcilla_dns_record" {
   type    = "A"
   ttl     = 300
   records = [aws_instance.carvcilla_instance.public_ip]
-}*/
+}

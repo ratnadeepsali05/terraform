@@ -1,7 +1,7 @@
 
-/*output "instance_domain_name" {
+output "instance_domain_name" {
   value = aws_route53_record.carvcilla_dns_record.name
-}*/
+}
 
 output "instance_id" {
   value = aws_instance.carvcilla_instance.id
