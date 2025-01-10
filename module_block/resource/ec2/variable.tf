@@ -3,7 +3,7 @@ variable "This_key" {
 }
 
 
-variable "This_ami" {
+variable "this_This_ami" {
      type = string    
 }
 variable "this_aws_vpc_id" {
@@ -15,9 +15,9 @@ variable "ec2_vpc_id" {
 } 
 
 
-variable "this_image_id" {
+/*variable "this_image_id" {
   type        = string
-}
+}*/
 
 
 
