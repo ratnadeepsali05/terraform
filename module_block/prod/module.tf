@@ -1,6 +1,6 @@
 module "ec2" {
     source = "/home/cloudshell-user/terraform/module_block/resource/ec2"
-    this_This_ami = "ami-09b0a86a2c84101e1"
+    this_This_ami = "ami-053b12d3152c0cc71"
     this_ec2type = "t2.micro"
     This_key  = "mum-key"
     this_disable_api_stop = false
