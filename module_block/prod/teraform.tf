@@ -5,7 +5,7 @@ required_providers {
       source  = "hashicorp/aws"
       version = "4.66.1"
     }
-  }*/
+  }
 
 backend "s3" {
 	bucket = "mytfmainbucketgloble5525" 
@@ -13,4 +13,5 @@ backend "s3" {
 	region = "ap-south-1"
 	
 }
+}*/
 
