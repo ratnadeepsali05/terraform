@@ -14,5 +14,5 @@ variable "vpc_id" {
 variable "subnets" {
   description = "The list of subnets for the EKS cluster"
   type        = list(string)
-  default     = ["subnet-0475abf0fd6adfce0", "subnet-05d2056f662a6dc9f", "subnet-01f99de82fab8114b"]
+  default     = ["subnet-0475abf0fd6adfce0","subnet-05d2056f662a6dc9f","subnet-01f99de82fab8114b"]
 }
